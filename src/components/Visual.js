@@ -35,4 +35,4 @@ export class Visual extends React.Component {
 
 Visual.propTypes = {
     onClick: PropTypes.func
-}
+};
