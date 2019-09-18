@@ -16,7 +16,7 @@ export const TextContainer = (props) => {
                 {props.paragraphText}
             </p>
 
-            <button className="button">
+            <button className="button" onClick={props.onClick}>
                 Zobacz więcej
             </button>
         </div>
@@ -24,6 +24,7 @@ export const TextContainer = (props) => {
 };
 
 TextContainer.propTypes = {
+    onClick: PropTypes.func,
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     paragraphText: PropTypes.string
