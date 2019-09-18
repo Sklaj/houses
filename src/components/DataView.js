@@ -10,7 +10,7 @@ export class Data extends React.Component {
       }
 
     componentDidMount() {
-        let passedThis = this;
+        const passedThis = this;
         fetch("http://mr-test-backend.sadek.usermd.net/houses")
         .then(function(res) {
             return res.json();
@@ -29,7 +29,7 @@ export class Data extends React.Component {
             })
             .then(res => {
                 console.log("usunięto dom nr.: " + id);
-                console.log(res)
+                console.log(res);
             });
         };
 
@@ -47,7 +47,7 @@ export class Data extends React.Component {
                 <ul>
                     {map(this.state.houses, (house, indx) => {
                         return (
-                            <li key={indx}>
+                            <li key={indx} style={{padding: "10px"}}>
                                 <span style={{paddingRight: "5px"}}>Dom nr {indx}</span>
                                 <span style={{paddingRight: "5px"}}>Adres: {house.address}</span>
                                 <span style={{paddingRight: "5px"}}>Właściciel: {house.owner}</span>
